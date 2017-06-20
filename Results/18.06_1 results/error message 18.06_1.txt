@@ -1,0 +1,13 @@
+Convergence at iteration 8
+Title time: 2617.6201
+Elapsed Time for all iterations: 2622.2682
+Warning: Contour not rendered for constant ZData 
+> In contourf (line 60)
+  In exampleRunFile (line 94) 
+Warning: Contour not rendered for constant ZData 
+> In contourf (line 60)
+  In exampleRunFile (line 94) 
+Warning: Contour not rendered for constant ZData 
+> In contourf (line 60)
+  In exampleRunFile (line 94) 
+>> 

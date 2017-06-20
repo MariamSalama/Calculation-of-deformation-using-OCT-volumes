@@ -1,0 +1,8 @@
+Convergence at iteration 13
+Title time: 48.1736
+Elapsed Time for all iterations: 48.8988
+Index exceeds matrix dimensions.
+
+Error in exampleRunFile (line 94)
+    [~,h] = contourf(plotIdx{1}, plotIdx{3}, squeeze(u{1}{i}(:,48,:))',25); colorbar
+ 

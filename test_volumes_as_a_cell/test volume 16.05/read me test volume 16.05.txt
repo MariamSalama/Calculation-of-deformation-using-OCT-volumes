@@ -1,0 +1,12 @@
+I changed a little bit in the second volume to see if the results would change 
+
+a = zeros(512,512,192);
+a(25:50,25:50,25:50)=100;
+vol = cell(1)
+vol{1,1} = a;
+
+b = zeros(512,512,192);
+b(25:50,25:50,25:50)=100;
+b(50:100,50:100,50:100)=100;  
+vol = cell(1)
+vol{1,1} = b;
