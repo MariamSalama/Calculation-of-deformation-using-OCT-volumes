@@ -1,6 +1,0 @@
-for i=1:192
-
-imagesc(test(:,:,i))
-drawnow
-pause
-end
