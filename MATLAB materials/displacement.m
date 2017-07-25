@@ -1,8 +1,8 @@
-function New_volume = displacement(vol1 ,center, radius, factor)
-% Input: vol1   :  the complete volume 
-%        center :  the reference point
-%        radius :  the radius of the volume the we want to change
-%        factor :  acts like a tunning knop, it's max value = radius
+function New_volume = displacement(vol1 ,center, radius, max_disp)
+% Input: vol1     :  the complete volume 
+%        center   :  the reference point
+%        radius   :  the radius of the volume the we want to change
+%        max_disp :  maximum displacement in the sub-volume
 
 
 
@@ -10,28 +10,17 @@ function New_volume = displacement(vol1 ,center, radius, factor)
 %creating a copy of the oiginal volume so we woud be able to compare
 new_volume = vol1;
 
-
-new_volume_size = min(size(new_volume));
-        %The intensity of the displacement is relative to the ratio between
-        %the volume we wish to apply diformation to the size of the whole volume
-        
-Fac = (radius / new_volume_size)*10; 
-        %this 10 is not accurate at all and it will cause problems 
-
        
 disp = zeros(radius,1);
         %disp is the array containing the values of the displacements
         %it starts with a maximum then it is supposed to decrease to zero
         
-if factor > radius
-    factor = radius;
-end
-    
+
         
 %The displacement will be equal in all direction like a quebe so we have
 %only one diplacement array
 for i = 1:radius
-    disp(i) = round(Fac * factor/i)
+    disp(i) = round(max_disp - ((i/radius)*max_disp) );
 end
 
 
